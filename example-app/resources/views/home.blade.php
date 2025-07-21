@@ -29,7 +29,7 @@
 
 </html> --}}
 
-@extends('layouts.master')
+@extends('layouts.index')
 @section('sidebar')
 @parent
 @endsection

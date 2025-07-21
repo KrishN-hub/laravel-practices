@@ -21,7 +21,7 @@
 </html> --}}
 
 
-@extends('layouts.master')
+@extends('layouts.index')
 @section('title', 'Photo')
 @section('content')
 

@@ -215,6 +215,8 @@ Route::post('submit-receive' , function (Request $request){
 
 Route::view('layouts/master', 'layouts.master');
 
+Route::view('layouts/index', 'layouts.index');
+
 
 
 

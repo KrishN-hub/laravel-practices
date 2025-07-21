@@ -80,7 +80,7 @@
 {{-- -------------------------------------------------- --}}
 
 
-{{-- @extends('layouts.master')
+@extends('layouts.index')
 @section('css')
 <style>
         body {
@@ -150,4 +150,4 @@
 
     </form>
 
-    @endsection --}}
+    @endsection

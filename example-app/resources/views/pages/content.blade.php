@@ -23,7 +23,7 @@
 </html> --}}
 
 
-@extends('layouts.master')
+@extends('layouts.index')
 @section('content')
 @section('title' , 'Content')
     <h1>Content Page</h1>

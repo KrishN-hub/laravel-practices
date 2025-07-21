@@ -14,7 +14,7 @@
 
     {{-- --old practices-- --}}
 
-@extends('layouts.master')
+@extends('layouts.index')
 @section('content')
 @section( 'title','About')
 
