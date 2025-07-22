@@ -2,6 +2,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use App\Http\Controllers\StudentController;
 
 
 // Route::get('home', function () {
@@ -24,11 +25,11 @@ use Illuminate\Support\Str;
 //     return view('welcome');
 // });
 
-Route::view('/', 'welcome');
-Route::view('home', 'home');
-Route::view('pages/about', 'pages.about');
-Route::view('pages/content', 'pages.content');
-Route::view('mental/photo', 'pages.photo');
+// Route::view('/', 'welcome');
+// Route::view('home', 'home');
+// Route::view('pages/about', 'pages.about');
+// Route::view('pages/content', 'pages.content');
+// Route::view('mental/photo', 'pages.photo');
 
 // Route::get('my-page', function() {
 // 	return 'This is my page';
@@ -52,22 +53,22 @@ Route::view('mental/photo', 'pages.photo');
 // });
 
 
-Route::view('pages/employee/employee-list', 'pages.employee.employee-list');
+// Route::view('pages/employee/employee-list', 'pages.employee.employee-list');
 
 
 
-Route::get('pages/employee/employee-details/{id?}/{name?}/{age?}/{number?}/{nic?}', function($id = 1, $name = "pirunthavan", $age = 26, $number = "0772413863", $nic = "992260742v") {
+// Route::get('pages/employee/employee-details/{id?}/{name?}/{age?}/{number?}/{nic?}', function($id = 1, $name = "pirunthavan", $age = 26, $number = "0772413863", $nic = "992260742v") {
 
 
 
-return view('pages.employee.employee-details', [
-        'id' => $id,
-        'name' => $name,
-        'age' => $age,
-        'number' => $number,
-        'nic' => $nic
-    ]);
-});
+// return view('pages.employee.employee-details', [
+//         'id' => $id,
+//         'name' => $name,
+//         'age' => $age,
+//         'number' => $number,
+//         'nic' => $nic
+//     ]);
+// });
 
 // Route:: get("home", function () {
 //     return ( "Wel come to my home page" );
@@ -137,24 +138,25 @@ return view('pages.employee.employee-details', [
 // });
 
 
-Route::view('pages/employee/employee-form', 'pages.employee.employee-form');
-Route::post('employee-details', function (Request $request) {
-    $data = $request->all();
-    return view('pages.employee.employee-details', [
-        'id' => $data['id'],
-        'name' => $data['name'],
-        'age' => $data['age'],
-        'number' => $data['phone'],
-        'nic' => $data['nic']
-    ]);
-});
+// Route::view('pages/employee/employee-form', 'pages.employee.employee-form');
+// Route::post('employee-details', function (Request $request) {
+//     $data = $request->all();
+//     return view('pages.employee.employee-details', [
+//         'id' => $data['id'],
+//         'name' => $data['name'],
+//         'age' => $data['age'],
+//         'number' => $data['phone'],
+//         'nic' => $data['nic']
+//     ]);
+// });
 
-Route::view('home', 'home');
+// Route::view('home', 'home');
 
-Route::view('form/input', 'form.input');
+// Route::view('form/input', 'form.input');
 
 // Route::post('submit-input' , function (Request $request) {
 //     dd (request()->all());
+
 
 // });
 
@@ -190,9 +192,9 @@ Route::view('form/input', 'form.input');
 //     ])->with('success', 'Form submitted successfully!');
 // });
 
-Route::post('submit-receive' , function (Request $request){
-    return view('form.receive', $request->all());
-});
+// Route::post('submit-receive' , function (Request $request){
+//     return view('form.receive', $request->all());
+// });
 
 // Route::post('submit-receive', function (Request $request) {
 //     $data = $request->all();
@@ -213,10 +215,11 @@ Route::post('submit-receive' , function (Request $request){
 
 //--17/7/2025--
 
-Route::view('layouts/master', 'layouts.master');
+// Route::view('layouts/master', 'layouts.master');
 
-Route::view('layouts/index', 'layouts.index');
+// Route::view('layouts/index', 'layouts.index');
 
+// -----------22/07/2025-----------------
 
-
+Route::resource('student', studentController::class);
 
