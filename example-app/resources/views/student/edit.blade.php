@@ -7,8 +7,9 @@
 
  <body>
     <h1> Edit</h1>
-    <form action="/" method="post" autocomplete="off" novalidate>
+    <form action="/student/10" method="post" autocomplete="off" novalidate>
         @csrf
+        @method('put')
         <table>
             <tr>
                 <td><label >First Name:</label></td>
@@ -19,9 +20,12 @@
                 <td><input type="text" name="lname" id="text"></td>
             </tr>
             <tr>
-                <td><label> Submit: </label></td>
+                <td><label> Submit </label></td>
                 <td><input type="submit" value="Submit"></td>
             </tr>
+            <tr>
+                <td><label> delete </label></td>
+                <td><input type ='submit' formaction="/student/10" formmethod="post"></td>
         </table>
     </form>
  </body>
