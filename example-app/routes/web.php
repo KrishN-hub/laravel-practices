@@ -3,6 +3,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\EmployeeController;
 
 
 // Route::get('home', function () {
@@ -222,4 +223,6 @@ use App\Http\Controllers\StudentController;
 // -----------22/07/2025-----------------
 
 Route::resource('student', studentController::class);
+
+route::resource('employees', EmployeeController::class);
 
