@@ -17,10 +17,25 @@ This repository is designed to help improve understanding of Laravel concepts th
 - 🧰 Laravel Utilities & Helpers
 - 🛠️ Mini Projects & Challenges
 
-
-
  🚀 Getting Started
 
 1. Clone the repo:
    
    git clone https://github.com/your-username/laravel-practices.git
+
+-------------------------------------28/7/2025----------
+
+in Employee.php - models
+
+class Employee extends Model
+{
+    protected $fillable = [
+        'first_name',
+        'last_name',
+    ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+}

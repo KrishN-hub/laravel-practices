@@ -46,19 +46,19 @@
         </tr>
         <tr>
             <td><label >First Name:</label></td>
-            <td><input type="text" name=fname" id="fname" value="{{ $employee->first_name }}"></td>
+            <td><input type="text" name="first_name" id="first_name" value="{{ $employee->first_name }}"></td>
         </tr>
         <tr>
             <td><label >Last Name:</label></td>
-            <td><input type="text" name="lname" id="lname" value="{{ $employee->last_name }}"></td>
+            <td><input type="text" name="last_name" id="last_name" value="{{ $employee->last_name }}"></td>
         </tr>
         <tr>
             <td><label >Created At:</label></td>
-            <td><input type="text" name="created_at" id="created_at" value="{{ $employee->created_at }}" disabled></td>
+            <td><input type="text" name="created_at" id="created_at" value="{{ $employee->created_at }}"></td>
         </tr>
         <tr>
             <td><label >Updated At:</label></td>
-            <td><input type="text" name="ubdated_at" id="ubdated_at" value="{{ $employee->updated_at }}" disabled></td>
+            <td><input type="text" name="updated_at" id="updated_at" value="{{ $employee->updated_at }}"></td>
         <tr>
             <td><input type="submit" value="Submit"></td>
 

@@ -40,23 +40,23 @@
     <table>
         <tr>
             <td><label >ID:</label></td>
-            <td><input type="text" name="id" id="id" value=""></td>
+            <td><input type="text" name="id" id="id" ></td>
         </tr>
         <tr>
             <td><label >First Name:</label></td>
-            <td><input type="text" name=fname" id="fname" value=""></td>
+            <td><input type="text" name="first_name" id="first_name" ></td>
         </tr>
         <tr>
             <td><label >Last Name:</label></td>
-            <td><input type="text" name="lname" id="lname" value=""></td>
+            <td><input type="text" name="last_name" id="last_name" ></td>
         </tr>
         <tr>
             <td><label >Created At:</label></td>
-            <td><input type="datetime-local" name="created_at" id="created_at" value="" ></td>
+            <td><input type="datetime-local" name="created_at" id="created_at" ></td>
         </tr>
         <tr>
             <td><label >Updated At:</label></td>
-            <td><input type="datetime-local" name="ubdated_at" id="ubdated_at" value="" ></td>
+            <td><input type="datetime-local" name="updated_at" id="updated_at"  ></td>
         <tr>
             <td><input type="submit" value="Submit"></td>
         </tr>

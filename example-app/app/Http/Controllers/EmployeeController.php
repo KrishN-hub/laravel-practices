@@ -30,7 +30,26 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        return 'Employee created successfully.';
+        // return 'Employee created successfully.';
+
+        // $employee =new Employee;
+        // $employee->first_name =  "pirunthavan";
+        // $employee->last_name = "sivapalan";
+        // $employee->save();
+
+        $employee =new Employee;
+        $employee->first_name = $request->input('first_name');
+        $employee->last_name = $request->input('last_name');
+        $employee->created_at = now();
+        $employee->updated_at = now();
+        $employee->save();
+
+        return redirect('/employees');
+
+
+
+
+
 
 
     }
@@ -59,7 +78,17 @@ class EmployeeController extends Controller
     public function update(Request $request, string $id)
     {
 
-        return 'Employee updated successfully.';
+        // return 'Employee updated successfully.';
+
+        $employee = Employee::find($id);
+        $employee->first_name = $request->input('first_name');
+        $employee->last_name = $request->input('last_name');
+        $employee->created_at = $request->input('created_at');
+        $employee->updated_at = now();
+        $employee->save();
+
+        return redirect('/employees');
+
 
         //    $employee = Employee::find($id);
         //    if ($employee) {
@@ -80,7 +109,13 @@ class EmployeeController extends Controller
     public function destroy(string $id)
     {
 
-        return 'deleted successfully.';
+        // return 'deleted successfully.';
+        $employee = Employee::find($id);
+        $employee->delete();
+        return redirect('/employees');
+
+
+
         // $employee = Employee::find($id);
         // if ($employee) {
         //     $employee->delete();

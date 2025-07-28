@@ -22,6 +22,7 @@
             <th>Last Name</th>
             <td>{{ $employee->last_name }}</td>
         </tr>
+        
         <tr>
             <th>Created At</th>
             <td>{{ $employee->created_at }}</td>

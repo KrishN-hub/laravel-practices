@@ -4,6 +4,12 @@
 </head>
 <body>
     <h1>Employee List</h1>
+    <form action="/employees/create" method="post" style="display:inline;">
+        @csrf
+        @method('get')
+        <button type="submit">Add New Employee</button>
+      </form>
+    <hr>
 
     {{-- {{dd($employee)}} --}}
 {{-- <pre>
@@ -31,6 +37,7 @@
         <th>Last Name</th>
         <th>Created At</th>
         <th>Updated At</th>
+
     </tr>
 
     <tr>
