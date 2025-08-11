@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create('nics', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name', length: 50);
-            $table->string('last_name', length: 50);
-            $table->string('nic',length: 20);
+            $table->string('nic_number', length: 20);
+            $table->integer('employee_id');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
-
-
         });
     }
 
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('employees');
+        Schema::dropIfExists('nics');
     }
 };

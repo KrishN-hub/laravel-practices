@@ -15,4 +15,11 @@ class Employee extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    public function nic()
+    {
+        return $this->hasOne(Nic::class);
+    }
+
+    public function
 }
